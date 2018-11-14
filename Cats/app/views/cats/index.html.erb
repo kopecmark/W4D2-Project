@@ -1,0 +1,40 @@
+<center>
+<h1> All the cats</h1>
+
+<% @cats.each do |cat| %>
+<table>
+    <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td> <%= cat.name %> </td>
+        </tr>
+        <tr>
+            <td>Birth-Date</td>
+            <td><%= cat.birth_date %></td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td><%= cat.color %></td>
+        </tr>
+        <tr>
+            <td>Sex</td>
+            <td><%= cat.sex %></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><%= cat.description %></td>
+        </tr>
+    </tbody>
+</table>
+<%= link_to "Cat Detail", cat_url(cat) %>
+<br>
+<br>
+  
+<% end %>
+</center>
